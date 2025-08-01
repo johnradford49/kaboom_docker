@@ -21,6 +21,13 @@ Made using Preact
   
 1. Install NodeJS + NPM + Vite  
 2. `npm i`  
-3. Create `.env` variable: `VITE_PEERJS_ID=<random-alphanumeric-text>`  
 4. `npm run dev` or `npm run build`  
+
+
+# Server Setup
+
+1. npm install -g peer
+2. peerjs --port 9000 --path /peerjs
+3. This will set up a server at http://localhost:9000/peerjs
+
 
