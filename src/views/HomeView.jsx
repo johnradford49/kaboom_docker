@@ -275,12 +275,12 @@ function HomeView({ }) {
                     connToRoom.close();
 
             
-        /    const connToRoom = createPeer.connect(constructPeerID(code, "board"));
-        /    setLoading(true);
-        /    connToRoom.on("open", () => {
-        /        toast.error("Error");
-        /        setPrompt(null);
-        /        connToRoom.close();
+        //    const connToRoom = createPeer.connect(constructPeerID(code, "board"));
+        //    setLoading(true);
+        //    connToRoom.on("open", () => {
+        //        toast.error("Error");
+        //        setPrompt(null);
+        //        connToRoom.close();
             })
 
 
