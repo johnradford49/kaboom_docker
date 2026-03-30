@@ -267,7 +267,7 @@ function HomeView({ }) {
             const code = idGenAlphabet();
 
                        
-            const connToRoom = createPeer.connect(constructPeerID(code, "board"));
+            const connToRoom = createPeer.connect(constructPeerID(code, "host"));
             setLoading(true);
             connToRoom.on("open", () => {
                 toast.error("Error");
