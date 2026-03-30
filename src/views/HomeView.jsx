@@ -155,30 +155,30 @@ function HomeView({ }) {
 
     }
 
-    // function getLastPlayer() {
+     function getLastPlayer() {
 
 
-    //     const all = allLocalStorage();
+         const all = allLocalStorage();
 
-    //     // last player
-    //     const lastPlayer = all.filter(a => a.key.startsWith("player-") && JSON.parse(a.value)?.id?.toUpperCase() !== "HOST")[0];
-    //     if (lastPlayer) tryToConnect(lastPlayer.key.split("-")[1], JSON.parse(lastPlayer.value));
+         // last player
+         const lastPlayer = all.filter(a => a.key.startsWith("player-") && JSON.parse(a.value)?.id?.toUpperCase() !== "HOST")[0];
+         if (lastPlayer) tryToConnect(lastPlayer.key.split("-")[1], JSON.parse(lastPlayer.value));
 
-    //     function tryToConnect(code, player) {
-    //         const connToRoom = testPeer.connect(constructPeerID(code, "host"));
-    //         connToRoom.on("open", () => {
-    //             setLastPlayer({ code, player, avaConfig: genConfig(player.name || player.id) })
-    //             connToRoom.close();
-    //         })
+         function tryToConnect(code, player) {
+             const connToRoom = testPeer.connect(constructPeerID(code, "host"));
+             connToRoom.on("open", () => {
+                 setLastPlayer({ code, player, avaConfig: genConfig(player.name || player.id) })
+                 connToRoom.close();
+             })
 
-    //         connToRoom.on("error", () => { conn.close(); setLastPlayer(null) })
+             connToRoom.on("error", () => { conn.close(); setLastPlayer(null) })
 
-    //         joinPeer.on("error", () => setLastPlayer(null))
+             joinPeer.on("error", () => setLastPlayer(null))
 
 
 
-    //     };
-    // }
+         };
+     }
 
 
 
@@ -269,7 +269,7 @@ function HomeView({ }) {
                        
             const connToRoom = createPeer.connect(constructPeerID(code, "board"));
             setLoading(true);
-            toast.error(code);
+            toast.error(code);                                        //debug show game code
             connToRoom.on("open", () => {
                 toast.error("Error");
                 setPrompt(null);
