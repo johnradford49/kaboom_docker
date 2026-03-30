@@ -269,8 +269,6 @@ function HomeView({ }) {
                        
             const connToRoom = createPeer.connect(constructPeerID(code, "board"));
             setLoading(true);
-            toast.error(code);  
-            toast.error(name);             //debug show game code
             connToRoom.on("open", () => {
                 toast.error("Error");
                 setPrompt(null);
