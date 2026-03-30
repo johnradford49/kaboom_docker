@@ -266,14 +266,21 @@ function HomeView({ }) {
 
             const code = idGenAlphabet();
 
-
-
             const connToRoom = createPeer.connect(constructPeerID(code, "board"));
-            setLoading(true);
-            connToRoom.on("open", () => {
-                toast.error("Error");
-                setPrompt(null);
-                connToRoom.close();
+                setLoading(true);
+                connToRoom?.on("open", () => {
+                    setPrompt({ element: <NamePrompt onEnter={setNameAndJoin} buttonValue="JOIN" /> })
+
+                    setLoading(false)
+                    connToRoom.close();
+
+            
+        /    const connToRoom = createPeer.connect(constructPeerID(code, "board"));
+        /    setLoading(true);
+        /    connToRoom.on("open", () => {
+        /        toast.error("Error");
+        /        setPrompt(null);
+        /        connToRoom.close();
             })
 
 
