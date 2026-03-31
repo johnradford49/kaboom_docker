@@ -12,8 +12,7 @@ Click the Kaboom logo 7 times to enter development mode.
 # Installation  
   
 docker build -t kaboom:latest .
-
 docker run -p 3000:3000 kaboom:latest
-
-
+or
+docker compose up --build
 
