@@ -269,11 +269,11 @@ function HomeView({ }) {
                        
             const connToRoom = createPeer.connect(constructPeerID(code, "host"));
             setLoading(true);
-          //  connToRoom.on("open", () => {
-          //      toast.error("Error");
-          //      setPrompt(null);
-          //      connToRoom.close();
-          //  })
+            connToRoom.on("open", () => {
+                toast.error("Error");
+                setPrompt(null);
+                connToRoom.close();
+            })
 
 
             createPeer.on("error", (err) => {
@@ -281,6 +281,7 @@ function HomeView({ }) {
                 // removes all host-{code} from localStorage
                 const all = allLocalStorage();
                 setLoading(false);
+                toast.error(code);
                 for (let i = 0; i < all.length; i++) {
                     const element = all[i];
                     if (element.key.startsWith("game-")) {
@@ -291,7 +292,7 @@ function HomeView({ }) {
 
                     }
 
-
+                toast.error(code);
                 }
 
 
