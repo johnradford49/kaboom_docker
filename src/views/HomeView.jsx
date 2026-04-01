@@ -33,7 +33,12 @@ import { CardsRow } from "../components/playsets/PlaysetDisplay";
 import { getCardFromId } from "../helpers/cards";
 import ContributeLinks from "../components/ContributeLinks";
 
-
+const peer = new Peer(undefined, {
+  host: import.meta.env.VITE_PEER_HOST || 'localhost',
+  port: import.meta.env.VITE_PEER_PORT || 9000,
+  path: '/myapp',
+  key: 'peerjs',
+});
 
 
 
