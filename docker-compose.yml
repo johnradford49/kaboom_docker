@@ -16,4 +16,4 @@ services:
     image: node:18-alpine
     command: npx peerjs --port 9000 --path /peerjs --key peerjs
     ports:
-      - "9000:9000"
+      - "9090:9000"
