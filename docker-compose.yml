@@ -10,6 +10,6 @@ services:
 
   peerserver:
     image: node:18-alpine
-    command: npx --yes peerjs --port 9000 --path /peerjs --key peerjs
+    command: sh -c "npm install -g peer && peerjs --port 9000 --path /peerjs --key peerjs"
     ports:
       - "9090:9000"
