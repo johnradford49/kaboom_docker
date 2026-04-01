@@ -1,16 +1,18 @@
 services:
   kaboom:
-    build: .
+    build:
+      context: .
+      args:
+        - VITE_PEER_HOST=localhost
+        - VITE_PEER_PORT=9000
+        - VITE_PEERJS_ID=kaboom123
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - VITE_PEER_HOST=localhost
-      - VITE_PEER_PORT=9000
-      - VITE_PEERJS_ID=kaboom123
     depends_on:
       - peerserver
-
+      
   peerserver:
     image: peerjs/peerjs-server
     ports:
