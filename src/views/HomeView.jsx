@@ -260,10 +260,11 @@ function HomeView({ }) {
     }
 
     function createRoom() {
-
-
-
+        if (!createPeer) return toast.error("Still connecting, please try again");
         setPrompt({ element: <NamePrompt onEnter={setNameAndCreate} buttonValue="CREATE" /> })
+   
+
+       
 
 
         function setNameAndCreate(name) {
