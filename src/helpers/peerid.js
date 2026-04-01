@@ -54,8 +54,8 @@ export function sendConstructor(myid, data, options = {}) {
 export async function getPeerConfig() {
   return {
     secure: false,
-    host: "localhost",
-    port: 3000,
+    host: window.location.hostname,
+    port: 9000,
     path: "/peerjs",
     key: "peerjs",
     config: {
