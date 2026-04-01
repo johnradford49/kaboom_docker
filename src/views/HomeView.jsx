@@ -36,7 +36,7 @@ import ContributeLinks from "../components/ContributeLinks";
 const peer = new Peer(undefined, {
   host: import.meta.env.VITE_PEER_HOST || 'localhost',
   port: import.meta.env.VITE_PEER_PORT || 9000,
-  path: '/myapp',
+  path: '/peerjs',   // ← was '/myapp'
   key: 'peerjs',
 });
 
