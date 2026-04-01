@@ -44,7 +44,12 @@ import CardInfoMenu from '../components/menus/CardInfoMenu';
 import PlayerSelectMenu from '../components/menus/PlayerSelectMenu';
 import toast from 'react-hot-toast';
 
-
+const peer = new Peer(undefined, {
+  host: import.meta.env.VITE_PEER_HOST || 'localhost',
+  port: import.meta.env.VITE_PEER_PORT || 9000,
+  path: '/myapp',
+  key: 'peerjs',
+});
 
 const ROUND_NAMES = ["NOT YET A", "FIRST", "SECOND", "THIRD", "FOURTH", "FITH"]
 
