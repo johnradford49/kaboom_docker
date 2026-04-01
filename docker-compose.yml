@@ -11,5 +11,5 @@ services:
   peerserver:
     image: peerjs/peerjs-server
     ports:
-      - "9090:9000"
+      - "3090:9000"
     command: --port 9000 --path /peerjs --key peerjs
