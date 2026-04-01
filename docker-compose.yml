@@ -7,10 +7,12 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - VITE_PEER_HOST=<your-local-machine-ip>
+      - VITE_PEER_HOST=<your-machine-ip>
       - VITE_PEER_PORT=9000
+      - VITE_PEERJS_ID=kaboom-local-host
     depends_on:
       - peerserver
+      
 
   peerserver:
     image: node:18-alpine
