@@ -33,6 +33,12 @@ import { PlayerRow } from "../components/PlayerList"
 import Avatar, { genConfig } from 'react-nice-avatar-vite-prod-fork'
 import Controls from '../components/info/Controls';
 
+const peer = new Peer(undefined, {
+  host: import.meta.env.VITE_PEER_HOST || 'localhost',
+  port: import.meta.env.VITE_PEER_PORT || 9000,
+  path: '/myapp',
+  key: 'peerjs',
+});
 
 
 
