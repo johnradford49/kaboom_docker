@@ -7,3 +7,13 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+      - VITE_PEER_HOST=<your-local-machine-ip>
+      - VITE_PEER_PORT=9000
+    depends_on:
+      - peerserver
+
+  peerserver:
+    image: node:18-alpine
+    command: npx peerjs --port 9000 --path /myapp --key peerjs
+    ports:
+      - "9000:9000"
