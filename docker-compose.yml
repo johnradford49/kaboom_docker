@@ -4,7 +4,7 @@ services:
       context: .
       args:
         - VITE_PEER_HOST=192.168.5.22
-        - VITE_PEER_PORT=9000
+        - VITE_PEER_PORT=3090
         - VITE_PEERJS_ID=kaboom123
     ports:
       - "3000:3000"
