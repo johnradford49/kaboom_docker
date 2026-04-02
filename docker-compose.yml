@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        - VITE_PEER_HOST=localhost
+        - VITE_PEER_HOST=192.168.5.22
         - VITE_PEER_PORT=9000
         - VITE_PEERJS_ID=kaboom123
     ports:
@@ -12,9 +12,9 @@ services:
       - NODE_ENV=production
     depends_on:
       - peerserver
-      
+
   peerserver:
     image: peerjs/peerjs-server
     ports:
       - "3090:9000"
-    command: --port 9000 --path /peerjs --key peerjs
+    command: --port 9000 --path /peerjs --key peerjs --allow_discovery --cors http://192.168.5.22:3000
