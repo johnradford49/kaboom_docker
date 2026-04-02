@@ -55,7 +55,7 @@ export async function getPeerConfig() {
   return {
     secure: false,
     host: window.location.hostname,
-    port: 9000,
+    port: 3090,
     path: "/peerjs",
     key: "peerjs",
     config: {
