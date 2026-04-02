@@ -16,5 +16,5 @@ services:
   peerserver:
     image: peerjs/peerjs-server
     ports:
-      - "3090:9000"
-    command: --port 9000 --path /peerjs --key peerjs --allow_discovery --cors http://192.168.5.22:3000
+      - "3090:3090"
+    command: --port 3090 --path /peerjs --key peerjs --allow_discovery --cors http://192.168.5.22:3000
