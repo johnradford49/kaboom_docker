@@ -1279,7 +1279,7 @@ function RoundStartScreen({ roundName = "FIRST" }) {
 function RoundEndScreen({ hostages, onReady = () => { }, onForceReady }) {
 
 
-    let EndRoundfx = new Audio ('./components/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3');
+    let EndRoundfx = new Audio ('./sounds/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3');
     EndRoundfx.play();
     return (
         <div className='absolute inset-0 flex flex-col items-center justify-start pt-20 screen-bg-blue font-extrabold text-title text-white drop-shadow-md text-4xl gap-3 text-center overflow-y-scroll overflow-hidden scrollbar-hide'>
