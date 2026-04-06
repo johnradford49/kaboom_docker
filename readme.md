@@ -3,6 +3,7 @@ A self hosted adaptation of the card game Two Rooms and a Boom™
   
 This work is [licensed](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) under the [Creative Commons license BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).  
 
+Based on https://github.com/Luke-lwz/kaboom
 
 # Development mode in app
 
