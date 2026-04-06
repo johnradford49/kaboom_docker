@@ -5,8 +5,8 @@ import { redirect, useParams } from "react-router-dom";
 // components
 import Countdown from "../components/Countdown";
 import { PageContext } from "../components/PageContextProvider";
-import useSound from 'use-sound';
-import endroundfx from '../../components/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3';
+// import useSound from 'use-sound';
+// import endroundfx from '../../components/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3';
 
 
 
@@ -1279,9 +1279,10 @@ function RoundStartScreen({ roundName = "FIRST" }) {
 function RoundEndScreen({ hostages, onReady = () => { }, onForceReady }) {
 
 
-
+    let EndRoundfx = new Audio ('./components/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3');
 
     return (
+        EndRoundfx.play()
         <div className='absolute inset-0 flex flex-col items-center justify-start pt-20 screen-bg-blue font-extrabold text-title text-white drop-shadow-md text-4xl gap-3 text-center overflow-y-scroll overflow-hidden scrollbar-hide'>
 
             <h2 style={{ animationDelay: "0ms" }} className='animate__animated animate__fadeInUp '>Round over!</h2>
