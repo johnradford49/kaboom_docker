@@ -48,7 +48,7 @@ import CardInfoMenu from '../components/menus/CardInfoMenu';
 import PlayerSelectMenu from '../components/menus/PlayerSelectMenu';
 import toast from 'react-hot-toast';
 
-let EndRoundfx = new Audio ('./sounds/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3');
+const EndRoundfx = new Audio ('./sounds/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3');
 
 const ROUND_NAMES = ["NOT YET A", "FIRST", "SECOND", "THIRD", "FOURTH", "FITH"]
 
