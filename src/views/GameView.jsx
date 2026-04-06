@@ -5,6 +5,10 @@ import { redirect, useParams } from "react-router-dom";
 // components
 import Countdown from "../components/Countdown";
 import { PageContext } from "../components/PageContextProvider";
+import useSound from 'use-sound';
+import endroundfx from '../../components/alexzavesa-action-and-epic-the-end-drums-3-468359.mp3';
+
+
 
 // dependencies
 import { Peer } from "peerjs";
